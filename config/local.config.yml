@@ -1,0 +1,11 @@
+apache_vhosts:
+  - servername: "planf.dev"
+    serveralias: "www.planf.dev"
+    documentroot: "{{ drupal_composer_install_dir }}/planf/web"
+    extra_parameters: |
+      ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000{{ drupal_core_path }}"
+
+mysql_databases:
+  - name: "{{ drupal_db_name }}_planf"
+    encoding: utf8
+    collation: utf8_general_ci
