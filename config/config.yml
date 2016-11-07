@@ -60,9 +60,11 @@ drush_make_options: "--no-gitinfofile"
 build_composer: true
 #drupal_composer_path: "{{ config_dir }}/drupal.composer.json"
 drupal_composer_path: false
-drupal_composer_install_dir: "/var/www/drupalvm"
-drupal_composer_dependencies:
-  - "drupal/devel:1.x-dev"
+drupal_composer_install_base_dir: "/var/www"
+drupal_composer_install_dir: "{{ drupal_composer_install_base_dir }}/drupalvm"
+drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}/sites"
+drupal_composer_dependencies: []
+#  - "drupal/devel:1.x-dev"
 
 # Set this to 'true' and 'build_makefile', 'build_composer' to 'false' if you
 # are using Composer's create-project as a site deployment strategy.
@@ -72,10 +74,10 @@ drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
 # settings below), but instead copy down a database (e.g. using drush sql-sync).
-install_site: true
+install_site: false
 
 # Required Drupal settings.
-drupal_core_path: "{{ drupal_composer_install_dir }}/sites"
+drupal_core_path: "{{ drupal_composer_install_dir }}/drupal"
 drupal_db_user: drupal
 drupal_db_password: drupal
 drupal_db_name: drupal
@@ -85,7 +87,7 @@ drupal_major_version: 8
 drupal_domain: "{{ vagrant_hostname }}"
 drupal_site_name: "Drupal"
 drupal_install_profile: standard
-drupal_enable_modules: [ 'devel' ]
+drupal_enable_modules: []
 drupal_account_name: admin
 drupal_account_pass: admin
 
@@ -200,11 +202,11 @@ installed_extras:
   # - elasticsearch
   # - java
   - mailhog
-  # - memcached
+  - memcached
   # - newrelic
   # - nodejs
   - pimpmylog
-  # - redis
+  - redis
   # - ruby
   # - selenium
   # - solr
