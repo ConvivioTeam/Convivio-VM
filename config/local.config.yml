@@ -1,9 +1,9 @@
 nginx_hosts:
-  - server_name: "www.planf.dev"
-    root: "{{ drupal_composer_site_install_dir }}/planf/web"
+  - server_name: "www.demo.dev"
+    root: "{{ drupal_composer_site_install_dir }}/demo/web"
     is_php: true
 
 mysql_databases:
-  - name: "{{ drupal_db_name }}_planf"
+  - name: "{{ drupal_db_name }}_demo"
     encoding: utf8
     collation: utf8_general_ci
