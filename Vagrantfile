@@ -9,8 +9,3 @@ ENV['DRUPALVM_DIR'] = "vendor/geerlingguy/drupal-vm"
 
 # Load the real Vagrantfile
 load "#{__dir__}/#{ENV['DRUPALVM_DIR']}/Vagrantfile"
-
-Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-#  config.ssh.insert_key = true
-#  config.ssh.forward_agent = false
-end
