@@ -1,0 +1,37 @@
+---
+- name: Installing Zsh and git
+  yum: pkg=zsh,git state=latest
+  register: installation
+
+- name: Backing up existing ~/.zshrc
+  shell: if [ -f ~/.zshrc ]; then mv ~/.zshrc{,.orig}; fi
+  when: installation|success
+  sudo: no
+
+- name: Cloning  oh-my-zsh
+  git:
+    repo=https://github.com/robbyrussell/oh-my-zsh
+    dest=~/.oh-my-zsh
+  when: installation|success
+  register: cloning
+  sudo: no
+
+- name: Use zsh as default shell
+  shell: chsh -s /bin/zsh vagrant
+  when: cloning|success
+  sudo: yes
+
+- name: Creating new ~/.zshrc
+  copy:
+    src=~/.oh-my-zsh/templates/zshrc.zsh-template
+    dest=~/.zshrc
+  when: cloning|success
+  register: config
+  sudo: no
+
+- name: Change the default Oh my Zsh! theme
+#  shell: sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mh"/g' ~/.zshrc
+  lineinfile: dest=~/.zshrc
+              regexp=^ZSH_THEME= line=ZSH_THEME="mh"
+  when: config|success
+  sudo: no

@@ -217,6 +217,7 @@ installed_extras:
 # Add any extra apt or yum packages you would like installed.
 extra_packages:
   - sqlite
+  - vim
 
 # You can configure almost anything else on the server in the rest of this file.
 extra_security_enabled: false
@@ -321,3 +322,6 @@ selenium_version: 2.53.0
 dashboard_install_dir: /var/www/dashboard
 known_hosts_path: ~/.ssh/known_hosts
 #ssh_home: "{{ drupal_core_path }}"
+
+# Run extra provisioning tasks
+post_provision_tasks_dir: "../../../../tasks/post/*"
