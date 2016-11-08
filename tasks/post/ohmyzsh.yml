@@ -1,6 +1,6 @@
 ---
 - name: Installing Zsh and git
-  yum: pkg=zsh,git state=latest
+  apt: pkg=zsh,git state=latest
   register: installation
 
 - name: Backing up existing ~/.zshrc
