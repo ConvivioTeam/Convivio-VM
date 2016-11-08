@@ -31,7 +31,7 @@ Installing CVM is dead easy.
 
 1. Clone the repo
 2. Run `composer install` to install Drupal VM ready to run
-3. if you want to make any changes to your own, then add them in the `config/local.config.yml` file. Here, you can override or extend any of the variables set in `config/config.yml`.
+3. If you want to make any changes to your own, then copy `config/default.local.config.yml` to `config/local.config.yml` add them in that file. Here, you can override or extend any of the variables set in `config/config.yml`.
 4. Run `vagrant up`
   - The vagrant should run and install all the bits and pieces to give you a working virtual machine for your own local development.
 5. Boil the kettle for a nice cup of tea while the installer runs.

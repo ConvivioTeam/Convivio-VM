@@ -5,3 +5,6 @@ composer.phar
 ### Vagrant template
 .vagrant/
 
+### local.config.yml is for local variables
+/config/local.config.yml
+
