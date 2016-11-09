@@ -39,7 +39,7 @@ Installing CVM is dead easy.
 
 # Working with CVM
 
-CVM mounts the directory `~/Sites/www` on your host machine into `/var/www/sites` (determined with the `drupal_composer_site_install_dir` config variable) on the virtual machine. This makes it easy to run an Nginx host for any project in your `~/Sites/www` directory.
+CVM mounts the directory `~/Sites` on your host machine into `/var/www` (determined with the `drupal_composer_site_install_dir` config variable) on the virtual machine. This makes it easy to run an Nginx host for any project in your `~/Sites` directory.
 
 You are then free to configure your projects to work in any way you see fit - built with Composer, with make files, by hand, or whatever. You'll just need to set up an Nginx host for it, and maybe a database too.
 

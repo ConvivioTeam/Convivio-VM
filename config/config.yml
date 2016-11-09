@@ -27,8 +27,8 @@ vagrant_synced_folders:
     destination: /var/www/drupalvm
     type: nfs
     create: true
-  - local_path: ~/Sites/www
-    destination: /var/www/sites
+  - local_path: ~/Sites
+    destination: /var/www
     type: nfs
     create: true
 
