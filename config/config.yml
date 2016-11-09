@@ -24,11 +24,11 @@ vagrant_synced_folders:
   # any of the build_* settings are 'true'. By default the folder is set to
   # the drupal-vm folder.
   - local_path: .
-    destination: /var/www/drupalvm
+    destination: "{{ drupal_composer_install_dir }}"
     type: nfs
     create: true
-  - local_path: ~/Sites/www
-    destination: /var/www/sites
+  - local_path: "{{ drupal_composer_site_host_dir }}"
+    destination: "{{ drupal_composer_site_install_dir }}"
     type: nfs
     create: true
 
@@ -62,7 +62,8 @@ build_composer: true
 drupal_composer_path: false
 drupal_composer_install_base_dir: "/var/www"
 drupal_composer_install_dir: "{{ drupal_composer_install_base_dir }}/drupalvm"
-drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}/sites"
+drupal_composer_site_host_dir: "~/Sites/projects"
+drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}/projects"
 drupal_composer_dependencies: []
 #  - "drupal/devel:1.x-dev"
 

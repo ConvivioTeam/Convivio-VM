@@ -39,7 +39,26 @@ Installing CVM is dead easy.
   
 # Working with CVM
 
-CVM mounts the directory `~/Sites/www` on your host machine into `/var/www/sites` (determined with the `drupal_composer_site_install_dir` config variable) on the virtual machine. This makes it easy to run an Nginx host for any project in your `~/Sites/www` directory.
+By default, CVM mounts the directory `~/Sites/projects` on your host machine into `/var/www/projects` on the virtual machine. This makes it easy to run an Nginx host for any project in your `~/Sites/projects` directory.
+
+It is easy to customise which directories get mounted in the `vagrant_synced_folders` settings in your `config/local.config.yml` by overriding the defaults. You just need to include these variables and set their values to whatever you prefer:
+ 
+ ```
+
+drupal_composer_install_base_dir: "/var/www"
+drupal_composer_install_dir: "{{ drupal_composer_install_base_dir }}/drupalvm"
+drupal_composer_site_host_dir: "~/Sites/projects"
+drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}/projects"
+ ```
+ 
+ E.g. to mount your `~/Sites/` directory into `/var/www`, you would need to include this in your `config/local.config.yml` file:
+ 
+ ```
+ drupal_composer_site_host_dir: "~/Sites"
+ drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}"
+  ```
+  
+**Note:** Be sure to configure your Nginx hosts to match (see below). 
 
 You are then free to configure your projects to work in any way you see fit - built with Composer, with make files, by hand, or whatever. You'll just need to set up an Nginx host for it, and maybe a database too.
 
@@ -54,6 +73,7 @@ nginx_hosts:
     is_php: true
   - server_name: "www.mytestsite.dev"
     root: "{{ drupal_composer_site_install_dir }}/mytestsite/docroot"
+    is_php: true
 ```
 
 ## Create a database for your site
