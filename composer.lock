@@ -63,16 +63,16 @@
     "packages-dev": [
         {
             "name": "geerlingguy/drupal-vm",
-            "version": "3.5.0",
+            "version": "3.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geerlingguy/drupal-vm.git",
-                "reference": "e3dcbf4d0ab594c5e9a0b1eca136639260412d7d"
+                "reference": "ada72e29aa1925a4b256f6ed24bb2591d17b6f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/e3dcbf4d0ab594c5e9a0b1eca136639260412d7d",
-                "reference": "e3dcbf4d0ab594c5e9a0b1eca136639260412d7d",
+                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/ada72e29aa1925a4b256f6ed24bb2591d17b6f88",
+                "reference": "ada72e29aa1925a4b256f6ed24bb2591d17b6f88",
                 "shasum": ""
             },
             "type": "project",
@@ -98,7 +98,7 @@
                 "virtual machine",
                 "vm"
             ],
-            "time": "2016-11-02 21:06:23"
+            "time": "2016-11-17 20:59:29"
         }
     ],
     "aliases": [],
