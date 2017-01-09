@@ -211,9 +211,9 @@ installed_extras:
   - redis
   # - ruby
   # - selenium
-  # - solr
+  - solr
   - varnish
-  # - xdebug
+  - xdebug
   # - xhprof
 
 # Add any extra apt or yum packages you would like installed.
