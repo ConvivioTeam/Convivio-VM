@@ -200,6 +200,7 @@ installed_extras:
   - adminer
   # - blackfire
   - drupalconsole
+  - drush
   # - elasticsearch
   # - java
   - mailhog
@@ -210,9 +211,9 @@ installed_extras:
   - redis
   # - ruby
   # - selenium
-  # - solr
+  - solr
   - varnish
-  # - xdebug
+  - xdebug
   # - xhprof
 
 # Add any extra apt or yum packages you would like installed.
@@ -223,7 +224,7 @@ extra_packages:
 # You can configure almost anything else on the server in the rest of this file.
 extra_security_enabled: false
 
-drush_version: "master"
+drush_version: "8.x"
 drush_keep_updated: true
 drush_composer_cli_options: "--prefer-dist --no-interaction"
 

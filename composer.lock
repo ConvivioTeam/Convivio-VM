@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80e33b036b93144f71583348114ce119",
-    "content-hash": "752a071bad15da8e5deaf92ac39c6b13",
+    "hash": "102297dc319d7c7e5c08b4bf1a4d4697",
+    "content-hash": "4af669f06c46a5f5d4dfcd3f1af974b7",
     "packages": [
         {
             "name": "mnsami/composer-custom-directory-installer",
@@ -63,19 +63,19 @@
     "packages-dev": [
         {
             "name": "geerlingguy/drupal-vm",
-            "version": "3.5.2",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geerlingguy/drupal-vm.git",
-                "reference": "ada72e29aa1925a4b256f6ed24bb2591d17b6f88"
+                "reference": "68feefa163f2d25e9668af9ac33eab9b151ac8a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/ada72e29aa1925a4b256f6ed24bb2591d17b6f88",
-                "reference": "ada72e29aa1925a4b256f6ed24bb2591d17b6f88",
+                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/68feefa163f2d25e9668af9ac33eab9b151ac8a6",
+                "reference": "68feefa163f2d25e9668af9ac33eab9b151ac8a6",
                 "shasum": ""
             },
-            "type": "project",
+            "type": "vm",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -98,7 +98,7 @@
                 "virtual machine",
                 "vm"
             ],
-            "time": "2016-11-17 20:59:29"
+            "time": "2016-12-30 22:05:07"
         }
     ],
     "aliases": [],

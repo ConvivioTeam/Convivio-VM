@@ -6,7 +6,7 @@
     "mnsami/composer-custom-directory-installer": "1.1.*"
   },
   "require-dev": {
-    "geerlingguy/drupal-vm": "^3.5"
+    "geerlingguy/drupal-vm": "^4"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
