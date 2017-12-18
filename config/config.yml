@@ -7,7 +7,7 @@ vagrant_synced_folder_default_type: nfs
 
 # If you need to run multiple instances of Drupal VM, set a unique hostname,
 # machine name, and IP address for each instance.
-vagrant_hostname: conviviovm.dev
+vagrant_hostname: conviviovm.develop
 vagrant_machine_name: conviviovm
 vagrant_ip: 192.168.88.89
 
@@ -27,10 +27,12 @@ vagrant_synced_folders:
     destination: "{{ drupal_composer_install_dir }}"
     type: nfs
     create: true
+    mount_options: ['nolock', 'vers=3', 'tcp', 'fsc', 'rw', 'noatime']
   - local_path: "{{ drupal_composer_site_host_dir }}"
     destination: "{{ drupal_composer_site_install_dir }}"
     type: nfs
     create: true
+    mount_options: ['nolock', 'vers=3', 'tcp', 'fsc', 'rw', 'noatime']
 
 # Memory and CPU to use for this VM.
 vagrant_memory: 2048
