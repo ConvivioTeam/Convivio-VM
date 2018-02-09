@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "102297dc319d7c7e5c08b4bf1a4d4697",
     "content-hash": "4af669f06c46a5f5d4dfcd3f1af974b7",
     "packages": [
         {
@@ -57,22 +56,22 @@
                 "composer-installer",
                 "composer-plugin"
             ],
-            "time": "2016-05-25 08:26:02"
+            "time": "2016-05-25T08:26:02+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "geerlingguy/drupal-vm",
-            "version": "4.1.1",
+            "version": "4.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/geerlingguy/drupal-vm.git",
-                "reference": "68feefa163f2d25e9668af9ac33eab9b151ac8a6"
+                "reference": "0ca883a9fd413b3a251c5a144167f7500cf884b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/68feefa163f2d25e9668af9ac33eab9b151ac8a6",
-                "reference": "68feefa163f2d25e9668af9ac33eab9b151ac8a6",
+                "url": "https://api.github.com/repos/geerlingguy/drupal-vm/zipball/0ca883a9fd413b3a251c5a144167f7500cf884b4",
+                "reference": "0ca883a9fd413b3a251c5a144167f7500cf884b4",
                 "shasum": ""
             },
             "type": "vm",
@@ -98,7 +97,7 @@
                 "virtual machine",
                 "vm"
             ],
-            "time": "2016-12-30 22:05:07"
+            "time": "2018-01-30T22:23:43+00:00"
         }
     ],
     "aliases": [],
