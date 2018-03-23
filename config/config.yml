@@ -66,8 +66,8 @@ drupal_composer_install_base_dir: "/var/www"
 drupal_composer_install_dir: "{{ drupal_composer_install_base_dir }}/drupalvm"
 drupal_composer_site_host_dir: "~/Sites/projects"
 drupal_composer_site_install_dir: "{{ drupal_composer_install_base_dir }}/projects"
-drupal_composer_dependencies: []
-#  - "drupal/devel:1.x-dev"
+drupal_composer_dependencies:
+  - "geerlingguy/drupal-vm:^4"
 
 # Set this to 'true' and 'build_makefile', 'build_composer' to 'false' if you
 # are using Composer's create-project as a site deployment strategy.
@@ -269,6 +269,7 @@ composer_home_owner: "{{ drupalvm_user }}"
 composer_home_group: "{{ drupalvm_user }}"
 composer_global_packages:
   - { name: hirak/prestissimo, release: '^0.3' }
+  - { name: drupal/drupal-extension, release: '*' }
 
 # Run specified scripts before or after VM is provisioned. Path is relative to
 # the `provisioning/playbook.yml` file.
